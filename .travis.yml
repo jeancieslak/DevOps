@@ -1,8 +1,6 @@
-
-  
 script:
   - docker pull jeancieslak/devops2
-  - docker run -v $PWD/:/app/report/ jeancieslak/devops2
+  - docker run -v $PWD/:/app/ jeancieslak/devops2
 
 after_script:
  - bash ./telegram_notification.sh
